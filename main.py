@@ -28,7 +28,7 @@ pip3 install -r requirements.txt
 
 This will install the packages from the requirements.txt for this project.
 '''
-load_dotenv("C:/Users/DELL/Downloads/day-70-starting-files-blog-for-deployment/.env")
+load_dotenv("/env/.env")
 secret_key = os.getenv("SECRET_KEY")
 
 app = Flask(__name__)
