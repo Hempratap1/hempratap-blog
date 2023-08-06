@@ -288,8 +288,8 @@ def contact():
         email = request.form["email"]
         phone = request.form["phone"]
         message = request.form["message"]
-        my_email = os.getenv("EMAIL_KEY")
-        password = os.getenv("PASSWORD_KEY")
+        my_email = os.environ.get("EMAIL_KEY")
+        password = os.environ.get("PASSWORD_KEY")
         new_letter = f"{name}\n{email}\n{phone}\n{message}"
         with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
             connection.starttls()
